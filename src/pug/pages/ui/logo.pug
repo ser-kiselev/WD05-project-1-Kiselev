@@ -1,0 +1,22 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Логотип - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Логотип
+			
+			.section-ui
+				div(style="background: #037EC6; padding: 30px")
+					+logo("#", "Блог о путешествиях")
+			pre.
+				+logo("#", "Блог о путешествиях")
+			
+			.title mixins/_mixins.pug
+			pre.
+				mixin logo(link, text)
+					.logo
+						a(class="logo__link" href= link) #{text}

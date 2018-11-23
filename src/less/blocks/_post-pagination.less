@@ -1,0 +1,23 @@
+.post__pagination {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	display: flex;
+	justify-content: space-between;
+	
+	&-link {
+		display: inline-block;
+		text-decoration: none;
+		background: @lightGrayBtn;
+		color: @white;
+		font-size: 16px;
+		font-weight: 700;
+		padding: 15px 22px;
+		.rounded(25px);
+		.transition;
+		
+		&:hover, &:focus, &:active {
+			background: darken(@lightGrayBtn, 10%);
+		}
+	}
+}
+

@@ -1,0 +1,29 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Пост в блоге - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Пост в блоге
+			
+			.title sections/article.pug
+			pre.
+				article.post
+
+					time.post__time 16 Марта 2017
+
+					h1.post__title Заголовок
+
+					.post__image
+						img(src="img/img.jpg" alt="Картинка" class="post__image-img")
+
+					.post__content
+						p Текст
+						p Текст
+					.post__pagination
+
+						+post-pagination("#", "Предыдущий пост")
+						+post-pagination("#", "Следующий пост")

@@ -10,12 +10,19 @@ block content
 			h1 Кнопки
 			
 			.section-ui
-				+button('Текст кнопки', '#!')
+				div
+					+post-pagination("#", "Предыдущий пост")
+				div
+					+submit("submit", "Опубликовать")
 			pre.
-				+button('Текст кнопки', '#!')
+				+post-pagination("#", "Предыдущий пост")
+				+submit("submit", "Опубликовать")
 			
 			.title mixins/_buttons.pug
 			pre.
-				mixin button(text, link)
-					a(class="button" href= link)&attributes(attributes) #{text}
+				mixin post-pagination(link, text)
+					a(class="post__pagination-link" href= link) #{text}
+
+				mixin submit(type, value)
+					input(class="comments-form__submit" type= type, value = value)
 

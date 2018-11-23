@@ -1,0 +1,21 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Textarea - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Textarea
+			
+			.section-ui
+				div
+					+textarea("comment", "Текст комментария...")
+			pre.
+				+textarea("comment", "Текст комментария...")
+			
+			.title mixins/_mixins.pug
+			pre.
+				mixin textarea(name, placeholder)
+					textarea(class="comments-form__textarea" name= name placeholder= placeholder required)

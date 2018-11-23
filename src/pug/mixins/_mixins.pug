@@ -1,1 +1,7 @@
 //- Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
+mixin logo(link, text)
+	.logo
+		a(class="logo__link" href= link) #{text}
+
+mixin textarea(name, placeholder)
+	textarea(class="comments-form__textarea" name= name placeholder= placeholder required)

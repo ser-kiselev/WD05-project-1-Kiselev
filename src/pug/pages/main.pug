@@ -5,5 +5,16 @@ block variables
 	- var pageClass = 'content-page';
 
 block content
-	br
-	h1 ...здесь ожидается что-то грандиозное ;-)
+	include ../sections/header.pug
+
+	.container
+		.row
+			.col-lg-10.offset-lg-1
+				include ../sections/article.pug
+				
+	.container
+		.row
+			.col-lg-10.offset-lg-1
+				include ../sections/comments.pug
+
+	include ../sections/footer.pug
