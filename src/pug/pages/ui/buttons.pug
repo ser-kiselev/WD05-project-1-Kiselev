@@ -11,18 +11,24 @@ block content
 			
 			.section-ui
 				div
-					+post-pagination("#", "Предыдущий пост")
-				div
-					+submit("submit", "Опубликовать")
+					+button('Предыдущий пост')
+				div.mt-15
+					+buttonPrimary('Опубликовать')
 			pre.
-				+post-pagination("#", "Предыдущий пост")
-				+submit("submit", "Опубликовать")
+				+button('Предыдущий пост')
+				+buttonPrimary('Опубликовать')
 			
 			.title mixins/_buttons.pug
 			pre.
-				mixin post-pagination(link, text)
-					a(class="post__pagination-link" href= link) #{text}
+				mixin button(text, link)
+					if link
+						a(class="button" href= link)&attributes(attributes) #{text}
+					else
+						a(class="button" href= '#!')&attributes(attributes) #{text}
 
-				mixin submit(type, value)
-					input(class="comments-form__submit" type= type, value = value)
+				mixin buttonPrimary(text, link)
+					if link
+						a(class="button button--primary" href= link)&attributes(attributes) #{text}
+					else
+						a(class="button button--primary" href= '#!')&attributes(attributes) #{text}
 

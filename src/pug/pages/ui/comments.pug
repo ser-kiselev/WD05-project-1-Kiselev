@@ -1,13 +1,23 @@
 extends ../../layouts/ui-layout/ui-layout.pug
 
 block variables
-	- var title = 'Виджет комментариев - UI-kit и HTML фреймворк - Документация';
+	- var title = 'Комметарии в блоге - UI-kit и HTML фреймворк - Документация';
 	- var pageClass = 'body--dashboard';
 
 block content
 	.main-wrapper
 		.container.container--left.user-content.pt-35
-			h1 Виджет комментариев
+			h1 Комметарии в блоге
+
+			.section-ui
+				.container
+					.row
+						.col-lg-10
+							.comments
+								h2.comments-title Оставить комментарий
+								form.comments-form#comments
+									+textarea("comment", "Я тоже там был, вот мои впечатления.")
+									+buttonPrimary('Опубликовать')
 			
 			.title sections/comments.pug
 			pre.
@@ -18,4 +28,4 @@ block content
 					form.comments-form#comments
 						
 						+textarea("comment", "Я тоже там был, вот мои впечатления.")
-						+submit("submit", "Опубликовать")
+						+buttonPrimary('Опубликовать')

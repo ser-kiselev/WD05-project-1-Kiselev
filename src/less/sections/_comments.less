@@ -11,6 +11,7 @@
 	min-height: 95px;
 	border: 2px solid #dde8ee;
 	padding: 12px 15px;
+	margin-bottom: 10px;
 	.rounded(8px);
 	.transition;
 	
@@ -18,25 +19,9 @@
 		outline: none;
 	}
 
-	&:hover, &:focus, &:active {
+	&:hover, 
+	&:focus, 
+	&:active {
 		.inner-shadow(0, 1px, 7px, 0.25);
-	}
-}
-
-.comments-form__submit {
-	display: inline-block;
-	margin-top: 10px;
-	background: @blue;
-	border: none;
-	color: @white;
-	font-size: 16px;
-	font-weight: 700;
-	padding: 12px 22px;
-	.rounded(25px);
-	.transition;
-	
-	&:hover, &:focus, &:active {
-		cursor: pointer;
-		background: lighten(@blue, 4%);
 	}
 }

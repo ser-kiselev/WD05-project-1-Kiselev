@@ -1,8 +1,11 @@
 mixin button(text, link)
-	a(class="button" href= link)&attributes(attributes) #{text}
+	if link
+		a(class="button" href= link)&attributes(attributes) #{text}
+	else
+		a(class="button" href= '#!')&attributes(attributes) #{text}
 
-mixin post-pagination(link, text)
-	a(class="post__pagination-link" href= link) #{text}
-
-mixin submit(type, value)
-	input(class="comments-form__submit" type= type, value = value)
+mixin buttonPrimary(text, link)
+	if link
+		a(class="button button--primary" href= link)&attributes(attributes) #{text}
+	else
+		a(class="button button--primary" href= '#!')&attributes(attributes) #{text}

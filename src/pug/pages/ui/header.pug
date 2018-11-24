@@ -6,8 +6,26 @@ block variables
 
 block content
 	.main-wrapper
-		.container.container--left.user-content.pt-35
+		.container.container--left.pt-35
 			h1 Шапка
+
+			.section-ui
+				header.header
+					.container
+						.row
+							.col-lg-6.offset-lg-3
+								+logo("#", "Блог о путешествиях")
+							.col-lg-6.offset-lg-3
+								-
+									var navigation = [
+											{name: 'Европа', link: '#'},
+											{name: 'Азия', link: '#'},
+											{name: 'Острова', link: '#'},
+											{name: 'Америка', link: '#'},
+											{name: 'Африка', link: '#'}
+										];
+
+								+navigation(navigation)
 			
 			.title sections/header.pug
 			pre.
@@ -15,6 +33,6 @@ block content
 					.container
 						.row
 							.col-lg-6.offset-lg-3
-								+logo("main.html", "Блог о путешествиях")
+								+logo("#", "Блог о путешествиях")
 							.col-lg-6.offset-lg-3
 								include navigation.pug
